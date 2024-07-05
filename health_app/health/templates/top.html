@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Top Page</title>
+</head>
+<body>
+    <h1>Food Tracker</h1>
+    <ul>
+        <li><a href="{% url 'register' %}">ユーザー情報を登録</a></li>
+        <li><a href="{% url 'record_meal' '朝食' %}">朝食を記録する</a></li>
+        <li><a href="{% url 'record_meal' '昼食' %}">昼食を記録する</a></li>
+        <li><a href="{% url 'record_meal' '夕食' %}">夕食を記録する</a></li>
+        <li><a href="{% url 'record_meal' '間食' %}">間食を記録する</a></li>
+    </ul>
+    <a href="{% url 'feedback' %}">フィードバックを受ける</a>
+</body>
+</html>

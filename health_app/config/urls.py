@@ -16,7 +16,15 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from health import views  # 修正点: config.views から health.views へ変更
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('register/', views.register_user, name='register'),
+    path('record/<str:meal_type>/', views.record_meal, name='record_meal'),
+    path('feedback/', views.feedback, name='feedback'),
+    path('', views.top, name='top'),
 ]
+
+
+
